@@ -1,0 +1,19 @@
+{
+  "name": "especializacion-frontend-2-224st",
+  "version": "1.0.0",
+  "description": "Monorepo para los ejercicios de la especialidad de Frontend II DH",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/humbertodrc/Especializacion-Frontend-2-224ST.git"
+  },
+  "author": "Humberto Rivero",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/humbertodrc/Especializacion-Frontend-2-224ST/issues"
+  },
+  "homepage": "https://github.com/humbertodrc/Especializacion-Frontend-2-224ST#readme"
+}
