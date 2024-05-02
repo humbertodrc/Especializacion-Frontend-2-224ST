@@ -22,16 +22,14 @@ Para implementar los Higher Order Components, necesitamos seguir los siguientes 
 
 ## Ejercicio
 
-Utilizando la técnica de Higher Order Components, nos piden crear un HOC `WhitLoader` que reciba un componente, una función `fetchDataFromApi`  y una url, si no hay datos muestre un componente `Spinner` y si hay datos muestre el componente que recibe por parámetro.
+Utilizando la técnica de Higher Order Components, nos piden crear un HOC `WhitColorSwap` que reciba un componente y le agregue un contenedor con una clase `color-swap` que cambie de color cada vez que se renderiza el componente.
 
 Para ello, necesitamos seguir los siguientes pasos:
 
-1. Crear una función `WhitLoader` que reciba un componente, una función `fetchDataFromApi` y una url y retorne un nuevo componente con la lógica compartida
+1. Crear una función `WhitColorSwap` que reciba un componente y retorne un nuevo componente con la lógica compartida
 
-2. Crear una función `fetchDataFromApi` que reciba una url y retorne los datos de la api
+2. Agregar un contenedor con una clase `color-swap` al componente retornado
 
-3. Utilizar la función `fetchDataFromApi` para obtener los datos de la api
+3. Crear la interfaz del componente retornado
 
-4. Crear un componente `Spinner` que muestre un spinner mientras se cargan los datos
-
-5. Utilizar el componente mejorado en cualquier componente
+4. Utilizar el componente mejorado en cualquier componente
