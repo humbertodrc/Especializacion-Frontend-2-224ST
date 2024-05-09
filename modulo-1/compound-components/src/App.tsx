@@ -7,8 +7,15 @@ function App() {
 		<>
 			<h1>Compound Components</h1>
 			<main>
-				{characters.map((character) => (
-					<Card key={character.id} character={character} />
+				{characters.map(({id, title, image, status, desc, alt}) => (
+					<Card key={id}>
+						<Card.Body>
+							<Card.Title>{title}</Card.Title>
+							<Card.Description>{desc}</Card.Description>
+							<Card.Image src={image} alt={alt} />
+							<Card.Status>{status}</Card.Status>
+						</Card.Body>
+					</Card>
 				))}
 			</main>
 		</>

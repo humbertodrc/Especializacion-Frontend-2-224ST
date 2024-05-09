@@ -22,11 +22,11 @@ Para implementar los Higher Order Components, necesitamos seguir los siguientes 
 
 ## Ejercicio
 
-Utilizando la técnica de Higher Order Components, nos piden crear un HOC `WhitColorSwap` que reciba un componente y le agregue un contenedor con una clase `color-swap` que cambie de color cada vez que se renderiza el componente.
+Utilizando la técnica de Higher Order Components, nos piden crear un HOC `WithtColorSwap` que reciba un componente y le agregue un contenedor con una clase `color-swap` que cambie de color cada vez que se renderiza el componente.
 
 Para ello, necesitamos seguir los siguientes pasos:
 
-1. Crear una función `WhitColorSwap` que reciba un componente y retorne un nuevo componente con la lógica compartida
+1. Crear una función `WithColorSwap` que reciba un componente y retorne un nuevo componente con la lógica compartida
 
 2. Agregar un contenedor con una clase `color-swap` al componente retornado
 

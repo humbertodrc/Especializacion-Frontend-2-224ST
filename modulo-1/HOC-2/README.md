@@ -22,7 +22,7 @@ Para implementar los Higher Order Components, necesitamos seguir los siguientes 
 
 ## Ejercicio
 
-Utilizando la técnica de Higher Order Components, nos piden crear un HOC `WhitLoader` que reciba un componente, una función `fetchDataFromApi`  y una url, si no hay datos muestre un componente `Spinner` y si hay datos muestre el componente que recibe por parámetro.
+Utilizando la técnica de Higher Order Components, nos piden crear un HOC `WithLoader` que reciba un componente, una función `fetchDataFromApi`  y una url, si no hay datos muestre un componente `Spinner` y si hay datos muestre el componente que recibe por parámetro.
 
 Para ello, necesitamos seguir los siguientes pasos:
 
