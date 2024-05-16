@@ -15,3 +15,24 @@ class CalculadoraAvanzada extends Calculadora {
   }
 }
 
+// Correcto ejemplo: Cumpliendo el OCP
+interface Operacion {
+  operacion(numero1: number, numero2: number): number;
+}
+
+class Suma implements Operacion {
+  operacion(numero1: number, numero2: number): number {
+    return numero1 + numero2;
+  }
+}
+
+class Resta implements Operacion {
+  operacion(numero1: number, numero2: number): number {
+    return numero1 - numero2;
+  }
+}
+
+const suma = new Suma();
+const resta = new Resta();
+console.log(suma.operacion(5, 3)); // 8
+console.log(resta.operacion(8, 3)); // 5

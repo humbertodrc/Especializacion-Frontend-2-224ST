@@ -19,3 +19,27 @@ class Pinguino extends Pajaro {
   }
 }
 
+// Correcto ejemplo: Cumpliendo el LSP
+class Ave {
+  comer() {
+    console.log("Comiendo");
+  }
+}
+
+class AveVoladora extends Ave{
+  volar() {
+    console.log("Volando alto");
+  }
+}
+
+class Aguila extends AveVoladora {
+  volar() {
+    console.log("Volando alto");
+  }
+}
+
+class Pinguino2 extends Ave {
+  comer(){
+    console.log("Comiendo");
+  }
+}

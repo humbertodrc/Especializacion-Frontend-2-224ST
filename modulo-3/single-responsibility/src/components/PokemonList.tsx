@@ -1,5 +1,7 @@
-import { useEffect, useState } from "react";
-import { Result } from '../types/pokemon.types';
+import {useEffect, useState} from "react";
+import {Result} from "../types/pokemon.types";
+import useApi from "../hook/useApi";
+import PokemonItems from "./PokemonItems";
 
 // Single-responsibility principle: Este principio establece que una clase debe tener una única razón para cambiar. Debe tener una sola responsabilidad.
 // En el siguiente componente estamos violando el principio SRP
@@ -7,31 +9,18 @@ import { Result } from '../types/pokemon.types';
 // para mejorar nuestro codigo
 
 const PokemonList = () => {
-  const [pokemons, setPokemons] = useState<Result[]>([]);
+	const {data: pokemons} = useApi();
 
-  useEffect(() => {
-    async function getPokemons() {
-      const response = await fetch(
-        "https://pokeapi.co/api/v2/pokemon?limit=10"
-      );
-      const firstTen = await response.json();
-      setPokemons(firstTen.results);
-    }
-    getPokemons();
-  }, []);
-
-  const renderPokemons = () => {
-    return pokemons.map((pokemon: Result) => {
-      return <li key={pokemon.url}>{pokemon.name}</li>;
-    });
-  };
-
-  return (
-    <section>
-      <h1>SRP 👨‍💻</h1>
-      <ul>{renderPokemons()}</ul>
-    </section>
-  );
+	return (
+		<section>
+			<h1>SRP 👨‍💻</h1>
+			<ul>
+				{pokemons.map((pokemon: Result) => (
+					<PokemonItems key={pokemon.name} name={pokemon.name} />
+				))}
+			</ul>
+		</section>
+	);
 };
 
 export default PokemonList;
