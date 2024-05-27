@@ -1,8 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './style.css'
-import { ModalContainer, ModalHeader, ModalOverlay, ModalWrapper } from './Modal.style';
-import { Button } from '../Button';
 
 export interface ModalInterface {
 	isShowing: boolean;
@@ -15,19 +13,19 @@ const Modal : React.FC<ModalInterface> = ({ isShowing, hide, title, children}) =
 	return isShowing
     ? ReactDOM.createPortal(
       <>
-        <ModalOverlay>
-          <ModalWrapper>
-            <ModalContainer>
-              <ModalHeader>
+        <div className="modal-overlay">
+          <div className="modal-wrapper">
+            <div className="modal">
+              <div className="modal-header">
                 <h4>{title}</h4>
-                <Button isPrimary onClick={hide}>
+                <button className="modal-close-button" onClick={hide}>
                   Cerrar
-                </Button>
-              </ModalHeader>
+                </button>
+              </div>
               <div>{children}</div>
-            </ModalContainer>
-          </ModalWrapper>
-        </ModalOverlay>
+            </div>
+          </div>
+        </div>
       </>,
       document.body
     )
