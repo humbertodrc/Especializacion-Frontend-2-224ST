@@ -10,3 +10,5 @@ export type LiveStream = {
   name: string;
   previewUrl: string
 }
+
+export type VideoItem = Video | LiveStream

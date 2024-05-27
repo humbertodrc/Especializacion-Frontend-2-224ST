@@ -3,12 +3,30 @@
 
 // Mal ejemplo: Violando el ISP
 // En el mal ejemplo, tenemos una interfaz llamada Trabajo que contiene dos métodos, trabajar y descansar. Luego, tenemos una clase Trabajador que implementa esta interfaz. La violación del ISP ocurre porque no todos los tipos de trabajadores necesitan ambos métodos. Por ejemplo, un trabajador de tiempo completo puede necesitar ambos, pero un trabajador por horas puede no necesitar la función de "descansar".
-interface Trabajo {
+// interface Trabajo {
+//   trabajar(): void;
+//   descansar(): void;
+// }
+
+// class Trabajador implements Trabajo {
+//   trabajar() {
+//     // Implementación
+//   }
+//   descansar() {
+//     // Implementación
+//   }
+// }
+
+// Ejericio: Aplicar el ISP
+interface Trabajar {
   trabajar(): void;
-  descansar(): void;
 }
 
-class Trabajador implements Trabajo {
+interface Descansar {
+  descansar(): void;
+}
+ 
+class TrabajadorTiempoCompleto implements Trabajar, Descansar {
   trabajar() {
     // Implementación
   }
@@ -17,4 +35,8 @@ class Trabajador implements Trabajo {
   }
 }
 
-
+class TrabajadorMedioTiempo implements Trabajar {
+  trabajar() {
+    // Implementación
+  }
+}
