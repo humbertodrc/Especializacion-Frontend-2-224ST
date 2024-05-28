@@ -24,13 +24,11 @@ function App() {
 				</button>
 			</div>
 
-			{/* Cambia estilos a JSS */}
 			<Modal isShowing={isAliveShowed} hide={toggleAlive} title="Rick's vivos">
 				{/* Cambia estilos a JSS */}
 				<Character status="alive" />
 			</Modal>
 
-			{/* Cambia estilos a JSS */}
 			<Modal isShowing={isDeadShowed} hide={toggleDead} title="Rick's muertos">
 				{/* Cambia estilos a JSS */}
 				<Character status="dead" />
