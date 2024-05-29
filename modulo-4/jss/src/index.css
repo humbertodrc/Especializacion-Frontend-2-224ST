@@ -23,7 +23,7 @@ button{
   border: none;
 }
 
-.App div button {
+/* .App div button {
   background-color: #00beab;
   cursor: pointer;
   padding: 1rem;
@@ -31,10 +31,10 @@ button{
   border: none;
   font-size: 18px;
   border-radius: 4px;
-}
-.App div button:hover {
+} */
+/* .App div button:hover {
   background-color: #00d4bf;
-}
+} */
 
 .App div button:not(:first-child) {
   margin-left: 24px;
@@ -55,4 +55,13 @@ img {
   display: block;
   margin: 0 auto;
   border-radius: 8px;
+}
+
+
+.button-primary {
+  background-color: #00d4bf;
+}
+
+.button-secondary {
+  background-color: #ff7e67;
 }
