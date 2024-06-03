@@ -16,7 +16,7 @@ body {
   gap: 56px;
 }
 
-.App div button {
+/* .App div button {
   background-color: rgb(0, 190, 171);
   cursor: pointer;
   padding: 1rem 2rem;
@@ -27,7 +27,7 @@ body {
 }
 .App div button:hover {
   background-color: rgb(0, 212, 191);
-}
+} */
 
 .App div button:not(:first-child) {
   margin-left: 24px;

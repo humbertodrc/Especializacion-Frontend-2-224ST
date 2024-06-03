@@ -1,6 +1,7 @@
 import './App.css';
 
 import logo from './assets/logo.svg';
+import { Button } from "./components/Button";
 import { Character } from './components/Character';
 import { Modal } from './components/Modal';
 import useModal from './hooks/useModal';
@@ -14,6 +15,7 @@ function App() {
     <div className="App">
       <img src={logo} />
       <div>
+        <Button>Button</Button>
         <button onClick={toggleAlive}>
           <p className="ButtonAliveRicks">Rick's vivos</p>
         </button>
