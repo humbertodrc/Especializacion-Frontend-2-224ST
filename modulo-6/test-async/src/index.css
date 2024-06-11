@@ -1,0 +1,65 @@
+body {
+	background: #000;
+}
+
+.App{
+  padding: 20px;
+}
+
+h1 {
+	color: #fff;
+	font-size: 4rem;
+	margin: 0.5rem 0;
+	text-align: center;
+}
+
+.grilla{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	grid-gap: 20px;
+}
+
+.card{
+	background: #181818;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.2);
+	padding: 20px;
+	color: #fff;
+}
+
+.card img{
+	width: 100%;
+}
+
+.search{
+	background: #181818;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.2);
+	padding: 20px;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	margin: 30px 0;
+}
+
+.search input{
+  display: block;
+	background: transparent;
+	border: none;
+	border-bottom: 1px solid #fff;
+	color: #fff;
+	font-size: 1.5rem;
+	padding: 10px;
+}
+
+.search button{
+  width: 100%;
+  background: #fff;
+  border: none;
+  border-radius: 5px;
+  color: #000;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px 20px;
+  margin-top: 15px;
+}

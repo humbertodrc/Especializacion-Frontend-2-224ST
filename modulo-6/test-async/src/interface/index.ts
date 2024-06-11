@@ -1,10 +1,8 @@
-export interface Product {
+export type Character = {
   id: number;
-  title: string;
-  price: number;
-  description: string;
-  category: string;
-  image: string;
-}
-
-export type Products = Product[];
+	image: string;
+	name: string;
+	status: string;
+	species: string;
+	gender: string;
+};

@@ -1,38 +1,59 @@
-import { useEffect, useState } from "react";
-import './App.css';
-import { getData } from "./service/api";
-import { Products } from "./interface";
+import {useEffect, useState} from "react";
+import "./App.css";
+import { Character } from "./interface";
+import { getCharacters } from "./service/getCharacters";
+
 
 function App() {
+	const [characters, setCharacters] = useState<Character[]>([]);
+	const [search, setSearch] = useState<string>("");
 
-  const [products, setProducts] = useState<Products>([]);
+	const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
+		setSearch(event.target.value);
+	};
 
-  useEffect(() => {
-    getData().then((data) => {
-      setProducts(data);
-    })
-  }, [])
+	const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+		event.preventDefault();
+		getCharacters(search).then((data) => setCharacters(data));
+		setSearch("");
+	};
 
-  return (
-    <>
-      <header className="header">
-        <h1>Test Async</h1>
-      </header>
-      <main>
-        <ul>
-          {products.map((product) => (
-            <li key={product.id}>
-              <h2>{product.title}</h2>
-              <p>{product.price}</p>
-              <p>{product.description}</p>
-              <p>{product.category}</p>
-              <img src={product.image} alt={product.title} />
-            </li>
-          ))}
-        </ul>
-      </main>
-    </>
-  );
+	useEffect(() => {
+		const fetchData = async () => {
+			const data = await getCharacters();
+			setCharacters(data);
+		};
+
+		fetchData();
+	}, []);
+
+	return (
+		<div className="App">
+			<div>
+				<h1>Testing Async</h1>
+				<div className='search'>
+					<form onSubmit={handleSubmit}>
+					<input
+						type="text"
+						placeholder="Search..."
+						value={search}
+						onChange={handleSearch}
+						/>
+						<button type="submit">Search</button>
+					</form>
+				</div>
+				<div className="grilla">
+					{characters && characters.map((character: any) => (
+						<div key={character.id} className="card">
+							<h2>{character.name}</h2>
+							<img src={character.image} alt={character.name} />
+						</div>
+					))}
+				</div>
+			</div>
+		</div>
+	);
 }
 
 export default App;
+
