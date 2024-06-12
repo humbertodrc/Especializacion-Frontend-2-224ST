@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <App /> Debe hacer match con el snapshot 1`] = `
+<div>
+  <div
+    class="App"
+  >
+    <div>
+      <h1>
+        Testing Async
+      </h1>
+      <div
+        class="search"
+      >
+        <form>
+          <input
+            placeholder="Search..."
+            type="text"
+            value=""
+          />
+          <button
+            type="submit"
+          >
+            Search
+          </button>
+        </form>
+      </div>
+      <div
+        class="grilla"
+      >
+        <div
+          class="card"
+        >
+          <h2>
+            Rick
+          </h2>
+          <img
+            alt="Rick"
+            src="https://rickandmortyapi.com/api/character/avatar/1.jpeg"
+          />
+        </div>
+        <div
+          class="card"
+        >
+          <h2>
+            Morty
+          </h2>
+          <img
+            alt="Morty"
+            src="https://rickandmortyapi.com/api/character/avatar/2.jpeg"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
