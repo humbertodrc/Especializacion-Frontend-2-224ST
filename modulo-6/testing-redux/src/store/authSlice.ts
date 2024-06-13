@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
 import { RootState } from './store'; // Importa RootState para la función selectora
 
 // Define la interfaz para el estado de autenticación
-interface AuthState {
+export interface AuthState {
   user: { email: string } | null;
   status: 'idle' | 'loading' | 'succeeded' | 'failed';
   error: string | null;
