@@ -1,0 +1,15 @@
+body{
+  background-color: rgba(0, 0, 0, 0.898);
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Ajustar el color de la fuente segun la preferencia del usuario */
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #fff;
+  }
+}
