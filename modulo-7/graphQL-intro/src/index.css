@@ -8,8 +8,8 @@ body{
 }
 
 /* Ajustar el color de la fuente segun la preferencia del usuario */
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   body {
     color: #fff;
   }
-}
+} */
